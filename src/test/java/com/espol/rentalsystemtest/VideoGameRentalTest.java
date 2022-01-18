@@ -75,7 +75,7 @@ public class VideoGameRentalTest {
      */
     @Test
     public void testGetCharge() {
-        assertEquals(gta.getCharge(drenta, consola), orden.getCharge());
+        assertEquals(gta.getCharge(drenta, consola), orden.getCharge(),0.0001);
 
     }
 
