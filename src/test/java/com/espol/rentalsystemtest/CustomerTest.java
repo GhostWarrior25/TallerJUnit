@@ -17,7 +17,15 @@ import static org.junit.Assert.*;
  * @author usuario
  */
 public class CustomerTest {
-    
+    Customer Carlos;
+    Movie mulan;
+    VideoGameRental orden;
+    MovieRental rent_pelicula;
+    WiiGame mario;
+    Xbox360Game halo;
+    Ps3Game gta;
+    int drenta;
+    boolean consola;
     public CustomerTest() {
     }
     
@@ -31,6 +39,12 @@ public class CustomerTest {
     
     @Before
     public void setUp() {
+        Carlos = new Customer("Carlos");
+        mulan = new Movie("Mulan", Movie.CHILDRENS);
+        rent_pelicula = new MovieRental(mulan,8 );
+        mario = new WiiGame("mario");
+        orden = new VideoGameRental(mario, 8, true);
+        
     }
     
     @After
@@ -43,11 +57,9 @@ public class CustomerTest {
     @Test
     public void testAddMovieRental() {
         System.out.println("addMovieRental");
-        MovieRental arg = null;
-        Customer instance = null;
+        MovieRental arg = rent_pelicula;
+        Customer instance = Carlos;
         instance.addMovieRental(arg);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -56,11 +68,10 @@ public class CustomerTest {
     @Test
     public void testAddVideoGameRental() {
         System.out.println("addVideoGameRental");
-        VideoGameRental arg = null;
-        Customer instance = null;
+        VideoGameRental arg = orden;
+        Customer instance = Carlos;
         instance.addVideoGameRental(arg);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -69,12 +80,10 @@ public class CustomerTest {
     @Test
     public void testStatement() {
         System.out.println("statement");
-        Customer instance = null;
-        String expResult = "";
+        Customer instance = Carlos;
+        String expResult = "Rental Record for Carlos\n" +"Amount owed is 0.0\n" +"You earned 0 frequent renter points";
         String result = instance.statement();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
