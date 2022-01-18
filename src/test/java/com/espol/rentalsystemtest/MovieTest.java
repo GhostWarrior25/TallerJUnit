@@ -18,6 +18,7 @@ import static org.junit.Assert.*;
  */
 public class MovieTest {
     
+    Movie theManWhoKnewTooMuch, mulan, slumdogMillionaire;
     public MovieTest() {
     }
     
@@ -31,6 +32,10 @@ public class MovieTest {
     
     @Before
     public void setUp() {
+        theManWhoKnewTooMuch = new Movie("The Man Who Knew Too Much", Movie.REGULAR);
+        mulan = new Movie("Mulan", Movie.CHILDRENS);
+        slumdogMillionaire = new Movie("Slumdog Millionaire", Movie.NEW_RELEASE);
+        
     }
     
     @After
@@ -43,8 +48,8 @@ public class MovieTest {
     @Test
     public void testGetPriceCode() {
         System.out.println("getPriceCode");
-        Movie instance = null;
-        int expResult = 0;
+        Movie instance = mulan;
+        int expResult = Movie.CHILDRENS;
         int result = instance.getPriceCode();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -57,8 +62,8 @@ public class MovieTest {
     @Test
     public void testSetPriceCode() {
         System.out.println("setPriceCode");
-        int arg = 0;
-        Movie instance = null;
+        int arg = Movie.REGULAR;
+        Movie instance = mulan;
         instance.setPriceCode(arg);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
