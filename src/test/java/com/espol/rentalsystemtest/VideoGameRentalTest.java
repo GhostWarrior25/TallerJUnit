@@ -21,7 +21,7 @@ public class VideoGameRentalTest {
     public VideoGameRentalTest() {
     }
     
-    /**
+    
     WiiGame mario;
     Xbox360Game halo;
     Ps3Game gta;
@@ -29,29 +29,9 @@ public class VideoGameRentalTest {
     int drenta;
     boolean consola;
     
-    @Before
-    public void setUp() {
-        mario = new WiiGame("Mario galaxy";
-        halo = new Xbox360Game("HALO");
-        gta = new Ps3Game("GTA 5");
-        drenta = 5;
-        consola= True;
-        orden = new VideoGameRental(gta, drenta , consola);
-    }
-    @Test
-    public void testGetDaysRented() {
-        assertEquals( drenta, orden.getDaysRented());
-    }
-    public void testGetVideoGame() {
-        assertEquals( gta, orden.getVideogame());
-    }
-    public void testGetDaysRented() {
-        assertEquals(gta.getCharge(drenta, consola), orden.getCharge());
-    }
-    public void testGetFrequentRenterPoints() {
-        assertEquals(gta.getFrequentRenterPoints(drenta, consola), orden.getFrequentRenterPoints());
-    }
-    */  
+  
+
+   
     @BeforeClass
     public static void setUpClass() {
     }
@@ -62,6 +42,12 @@ public class VideoGameRentalTest {
     
     @Before
     public void setUp() {
+        mario = new WiiGame("Mario galaxy");
+        halo = new Xbox360Game("HALO");
+        gta = new Ps3Game("GTA 5");
+        drenta = 5;
+        consola= true;
+        orden = new VideoGameRental(gta, drenta , consola);
     }
     
     @After
@@ -73,13 +59,7 @@ public class VideoGameRentalTest {
      */
     @Test
     public void testGetDaysRented() {
-        System.out.println("getDaysRented");
-        VideoGameRental instance = null;
-        int expResult = 0;
-        int result = instance.getDaysRented();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(drenta, orden.getDaysRented());
     }
 
     /**
@@ -87,13 +67,7 @@ public class VideoGameRentalTest {
      */
     @Test
     public void testGetVideoGame() {
-        System.out.println("getVideoGame");
-        VideoGameRental instance = null;
-        Object expResult = null;
-        Object result = instance.getVideoGame();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals( gta, orden.getVideoGame());
     }
 
     /**
@@ -101,13 +75,8 @@ public class VideoGameRentalTest {
      */
     @Test
     public void testGetCharge() {
-        System.out.println("getCharge");
-        VideoGameRental instance = null;
-        double expResult = 0.0;
-        double result = instance.getCharge();
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(gta.getCharge(drenta, consola), orden.getCharge());
+
     }
 
     /**
@@ -115,13 +84,7 @@ public class VideoGameRentalTest {
      */
     @Test
     public void testGetFrequentRenterPoints() {
-        System.out.println("getFrequentRenterPoints");
-        VideoGameRental instance = null;
-        int expResult = 0;
-        int result = instance.getFrequentRenterPoints();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      assertEquals(gta.getFrequentRenterPoints(drenta, consola), orden.getFrequentRenterPoints());
     }
     
 }
