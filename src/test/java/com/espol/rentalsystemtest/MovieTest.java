@@ -53,7 +53,7 @@ public class MovieTest {
         int result = instance.getPriceCode();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -66,7 +66,7 @@ public class MovieTest {
         Movie instance = mulan;
         instance.setPriceCode(arg);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }
