@@ -17,6 +17,8 @@ import static org.junit.Assert.*;
  * @author usuario
  */
 public class MovieRentalTest {
+    Movie mulan;
+    MovieRental renta;
     
     public MovieRentalTest() {
     }
@@ -31,6 +33,9 @@ public class MovieRentalTest {
     
     @Before
     public void setUp() {
+        mulan = new Movie("Mulan", Movie.CHILDRENS);
+        renta = new MovieRental(mulan, 5);
+        
     }
     
     @After
@@ -43,8 +48,8 @@ public class MovieRentalTest {
     @Test
     public void testGetDaysRented() {
         System.out.println("getDaysRented");
-        MovieRental instance = null;
-        int expResult = 0;
+        MovieRental instance = renta;
+        int expResult = 5;
         int result = instance.getDaysRented();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -57,8 +62,8 @@ public class MovieRentalTest {
     @Test
     public void testGetMovie() {
         System.out.println("getMovie");
-        MovieRental instance = null;
-        Movie expResult = null;
+        MovieRental instance = renta;
+        Movie expResult = mulan;
         Movie result = instance.getMovie();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
