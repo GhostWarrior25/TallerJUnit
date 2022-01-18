@@ -43,36 +43,6 @@ public class VideoGameRental {
     	return 0;
     }
     
-    
-    WiiGame mario;
-    Xbox360Game halo;
-    Ps3Game gta;
-    VideoGameRental orden;
-    int drenta;
-    boolean consola;
-
-    @Before
-    public void setUp() {
-        mario = new WiiGame("Mario galaxy";
-        halo = new Xbox360Game("HALO");
-        gta = new Ps3Game("GTA 5");
-        drenta = 5;
-        consola= True;
-        orden = new VideoGameRental(gta, drenta , consola);
-    }
-    @Test
-    public void testGetDaysRented() {
-        assertEquals( drenta, orden.getDaysRented());
-    }
-    public void testGetVideoGame() {
-        assertEquals( gta, orden.getVideogame());
-    }
-    public void testGetDaysRented() {
-        assertEquals(gta.getCharge(drenta, consola), orden.getCharge());
-    }
-    public void testGetFrequentRenterPoints() {
-        assertEquals(gta.getFrequentRenterPoints(drenta, consola), orden.getFrequentRenterPoints());
-    }
-                            
+                          
                             
 }
